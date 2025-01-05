@@ -14,7 +14,8 @@ function App() {
     event.preventDefault();
     setError(null);
     try {
-      const response = await axios.get('http://localhost:8080/coin-calculator', {
+      const API_BASE_URL = 'http://13.250.10.152:8080';
+      const response = await axios.get(`${API_BASE_URL}/coin-calculator`, {
         params: {
           targetAmount: targetAmount,
           coinDenominations: coinDenominations,
